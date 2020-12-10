@@ -58,7 +58,7 @@ export const createHopper = (scope, validateItems, options) => {
     const api = {
         updateHopperState: () => {
             if (lastState !== currentState) {
-                scope.dataset.hopperState = currentState;
+                scope.setAttribute('data-hopper-state', currentState);
                 lastState = currentState;
             }
         },
